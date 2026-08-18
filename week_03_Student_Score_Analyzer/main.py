@@ -2,7 +2,7 @@
 
 students = [
     {"name": "Ada", "math": 78, "english": 82, "science": 74, "attendance": 92},
-    {"name": "David", "math": 91, "english": 88, "science": 95, "attendance": 80},
+    {"name": "David", "math": 64, "english": 58, "science": 61, "attendance": 80},
     {"name": "Zainab", "math": 91, "english": 88, "science": 95, "attendance": 97},
     {"name": "Chinedu", "math": 45, "english": 52, "science": 48, "attendance": 72},
     {"name": "Mariam", "math": 83, "english": 79, "science": 86, "attendance": 90},
@@ -37,42 +37,49 @@ for student in students:
     else:
         student["status"] = "Fail"
         fail_count += 1
-
+#### calculate the class average
 for student in students:
     class_total +=  student["average"]
 class_average = class_total / len(students)
 print(f"Class average: {class_average:.1f}")
 
+### finding the best and weak student
 
-for s in students:
-    if s["average"] > best_student["average"]:
-        best_student = s
-    elif s["average"] == best_student["average"]:
-        winner, winner2 = s, best_student
-        print(f"Best students: {winner['name']} and {winner2['name']} — {winner2['average']}")
+for student in students:
+    if student["average"] > best_student["average"]:
+        best_student = student
+        print(f"Best studzzzent: {best_student['name']} — {best_student['average']}")
+    elif best_student["average"] == student["average"] and best_student["name"] != student["name"]:
+        runner_up_1, runnerup_2 = best_student, student
+        print(f"Best stufffdent: {runner_up_1['name']} — {runnerup_2['name']} — {runner_up_1['average']}")
 for student in students:
     if student["average"] < weak_student["average"]:
         weak_student = student
+    elif weak_student["average"] == student["average"] and weak_student["name"] != student["name"]:
+        runner_up_1, runnerup_2 = weak_student, student
+        print(f"Weak student: {runner_up_1['name']} — {runnerup_2['name']} — {runner_up_1['average']}")
 
 
 print("Weak student:", weak_student["name"])
 
-
+###### filtering students who need help based on average and attendance
 for student in students:
     if student["average"] < PASS_MARK or student["attendance"] < MIN_ATTENDANCE:
         student_help.append(student) 
 for _ in student_help:
     print(f"needhelp: {_["name"]}")
 
-
+### filtering students who are below pass mark
 for student in students:
     if student["average"] < PASS_MARK:
         below_pass.append(student)
         print(f"below_pass: {_["name"]}")
-
+### filtrering students who need help based on average and attendance
 for student in students:
     if student["average"] < PASS_MARK or student["attendance"] < MIN_ATTENDANCE:
         needs_help.append(student)
+
+### printing the final report
 print()
 print("================== STUDENT SCORE ANALYZER =================")
 print()
