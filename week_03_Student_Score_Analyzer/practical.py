@@ -1,14 +1,11 @@
-## 1. ask for the user's name and remove unwanted surrounding spaces from the name;
 while True:
     name = input("Enter your name: ").strip()
-    ## reject an empty name or a name containing only spaces;
     if not name:
         print("Please enter a valid name")
         continue
     else:
         print(name)
         break
-    ##  ask for age;
 while True:
     age_text = input("Enter a valid age: ")
     ## keep asking for age until the user enters a valid whole number;
