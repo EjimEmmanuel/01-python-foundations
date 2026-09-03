@@ -1,57 +1,108 @@
-while True:
-    name = input("Enter your name: ").strip()
-    if not name:
-        print("Please enter a valid name")
-        continue
-    else:
-        print(name)
-        break
-while True:
-    age_text = input("Enter a valid age: ")
-    ## keep asking for age until the user enters a valid whole number;
-    try:
-        age = int(age_text)
-    except ValueError:
-        print("Please Enter a valid digit number")
-        continue
-    ## reject ages below 5 or above 100;
-    else:
-        if not 5 <= age <= 100:
-            print("Please enter age between 5 and 100")
-    ## 11. classify the learner as `Child learner` for age below 13, `Teen learner` for 13–19 inclusive, and `Adult learner` for 20 or above;
-        else:
-            break
-##  ask for daily study hours as a decimal number;
-while True:
-    daily_study_text = input("Enter your daily study hours: ")
-    try:
-        daily_hours = float(daily_study_text)
-    except ValueError:
-        print("Please Enter a valid decimal number")
-        continue
-    else:
-        if not 0.5 <= daily_hours <= 12:
-            print("Please enter study hours between 0.5 and 12")
-            continue
-        else:
-            print(daily_hours)
-            break
-## ask for a learning goal and reject an empty goal;
-learning_goal = input("What's your learning goal: ")
-if not learning_goal:
-    print("Please enter a valid learning goal")
-
-print("--- LEARNER PROFILE ---")
-print(f"Name: {name}")
-print(f"Age: {age}")
-if age < 13:
-    print("Category: Child learner")
-elif 13 <= age <= 19:
-    print("Category: Teen learner")
-else:
-    print("Category: Adult learner")
-print(f"Daily study hours: {daily_hours}")
-print(f"Goal: {learning_goal}")
-print("Status: Profile accepted")
+learners = [
+    {"name": "Ada", "python": 78, "logic": 82, "project": 74, "attendance": 92},
+    {"name": "Tobi", "python": 44, "logic": 39, "project": 46, "attendance": 81},
+    {"name": "Mariam", "python": 88, "logic": 84, "project": 91, "attendance": 96},
+    {"name": "Emeka", "python": 61, "logic": 58, "project": 63, "attendance": 74},
+    {"name": "Zainab", "python": 53, "logic": 57, "project": 55, "attendance": 85},
+    {"name": "Chinedu", "python": 35, "logic": 49, "project": 43, "attendance": 69},
+    {"name": "Ngozi", "python": 92, "logic": 89, "project": 94, "attendance": 98},
+    {"name": "Samuel", "python": 50, "logic": 50, "project": 50, "attendance": 73},
+]
 
 
+""" calculating the learner's average"""
+for learner in learners:
+    average = (learner["python"] + learner["logic"] + learner["project"]) / 3
+    learner["average"] = average
+
+""" assigning `"Pass"` to a learner when average is **50 or above**, otherwise assign `"Fail"`;
+"""
+for learner in learners:
+    if learner["average"] >= 50:
+        learner["status"] = "PASS"
+    else:
+        learner["status"] = "FAIL"
+""" Calculating the overall cohort average using an accumulator;
+"""
+
+cohort_total = 0
+
+for learner in learners:
+    cohort_total += learner["average"]
+cohort_average = (cohort_total / 8)
+
+"""find the best learner using a **best-so-far** pattern;
+"""
+Best_learner = learners[0]
+for learner in learners:
+    if learner["average"] > Best_learner["average"]:
+        Best_learner = learner
+
+
+"""find the weakest learner using a **weakest-so-far** pattern;
+"""
+Weak_learner = learners[0]
+for learner in learners:
+    if learner["average"] < Weak_learner["average"]:
+        Weak_learner = learner
+
+""" count how many learners pass and how many fail;
+"""
+above_pass = 0
+below_pass = 0
+
+
+for learner in learners:
+    if learner["average"] > 50:
+        above_pass =+ 1
+    below_pass =+ 1
+
+""" create a list containing every learner below the pass threshold;
+"""
+below_pass_threshold = []
+
+for learner in learners:
+    if learner["average"] < 50:
+        below_pass_threshold.append(learner)
+
+""" create a list containing every learner needing support using this project rule:
+"""
+needing_support = []
+for learner in learners:
+    if learner["average"] < 50 or learner["attendance"] < 75:
+        needing_support.append(learner)
+
+
+""" print a clean numbered report using a loop;
+"""
+
+print("=" * 50)
+print( )    
+print("COHORT SCORES ANALYSER")
+print()
+print("=" * 50)
+
+print(f"Cohort average: {cohort_average:.2f}")
+"""best"""
+print("The best student is: ")
+print(f"{Best_learner["name"]} -- {Best_learner['average']:.2f}")
+
+"""Weak"""
+print("The weakeest student is: ")
+print(f"{Weak_learner["name"]} -- {Weak_learner['average']:.2f}")
+print(f"Pass count: {above_pass}")
+print(f"Fail count: {below_pass}")
+
+"""Below  pass threshold"""
+print("The students below pass thresshold are: ")
+for learner in below_pass_threshold:
+    if len(below_pass_threshold) == 0:
+        print("There's no student below the pass threshold: ")
+    print(f"{learner["name"]} --- {learner["average"]:.2f}")
+
+"""Needing support."""
+print("The students needing support are: ")
+for learner in needing_support:
+    if len(needing_support) == 0:
+        print("There's No Student Below The Pass Threshold: ")
+    print(f"{learner["name"]} - {learner["average"]:.2f} - {learner["attendance"]}")

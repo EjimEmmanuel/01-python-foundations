@@ -1,5 +1,5 @@
 
-### calculate averagecd
+### calculate average
 def calculate_average(student):
     return (student["math"] + student["english"] + student["science"]) / 3
 

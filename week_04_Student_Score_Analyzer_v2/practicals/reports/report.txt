@@ -1,0 +1,16 @@
+==================================================
+ 
+============== STUDENT SCORE ANALYSER ============
+ 
+==================================================
+ 
+1. Ada        Average: 184.67  Status: Pass  
+2. Tobi       Average: 98.33  Status: Pass  
+3. Mariam     Average: 202.33  Status: Pass  
+4. Emeka      Average: 140.00  Status: Pass  
+ 
+class Average: 35.00 
+Best Student: Mariam - 202.33 
+Weakest Student: Ada - 184.67 
+Students Needing support:
+Emeka - 140.00 -- 74% 

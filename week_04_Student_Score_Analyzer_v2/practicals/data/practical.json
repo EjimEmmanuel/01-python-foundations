@@ -1,0 +1,6 @@
+[
+  {"name": "Ada", "math": 78, "english": 82, "science": 74, "attendance": 92},
+  {"name": "Tobi", "math": 44, "english": 39, "science": 46, "attendance": 81},
+  {"name": "Mariam", "math": 88, "english": 84, "science": 91, "attendance": 96},
+  {"name": "Emeka", "math": 61, "english": 58, "science": 63, "attendance": 74}
+]
