@@ -1,9 +1,10 @@
+source .venv/bin/activate
 
 Your finished project will include:
 
 - an object-oriented Stone Lines game engine;
 - placement and movement phases;
-- winner detection;
+- winner detection;Placemen_loop
 - graph-based movement rules;
 - strong input validation;
 - a polished terminal interface using Rich;
@@ -491,7 +492,7 @@ test: cover placement and movement rules
 docs: finish setup and gameplay guide
 release: Stone Lines Arena v1.0
 ```
-
+ winning lines detection, movement graph and legal moves has been added
 
 
 ## 16. Completion standard
@@ -565,17 +566,3 @@ The application keeps:
 - all-time games, wins, and losses in JSON.
 
 A quit before a winner exists does not count as a completed match.
-
-
-"
-    def switch_player(self):
-        if self.current_player == "X":
-            self.current_player = "O"
-        else:
-            self.current_player = "X"
-            "
-            "
-    def switch_player(self):
-        if self.current_player == "X":
-            self.current_player = "O"
-        self.current_player = "X""
