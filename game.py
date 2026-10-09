@@ -1,29 +1,49 @@
 import constant as c
 from rich.console import Console
+import storage as s
 
+"""  object creation for the game """
 console = Console()
-from rich import print
-class Game:
 
-    def __init__(self, board, current_player, current_phase, winner_state):
+class Game:
+    def __init__(self, board, current_player, current_player_name, current_phase, player_X, player_O, stone_placed):
         self.board = board
         self.current_player = current_player
         self.current_phase = current_phase
-        self.winner_state = winner_state
-        
-
+        self.player_X = player_X
+        self.player_O = player_O
+        self.current_player_name = current_player_name
+        self.stone_placed = stone_placed
     """ winning logic"""
     def check_winner(self, board, current_player):
         for line in c.winning_lines:
-            first = board[line[0]]
-            second = board[line[1]] 
-            third = board[line[2]]
-            if first == current_player and second == current_player and third == current_player:
+            if board[line[0]] == current_player and board[line[1]] == current_player and board[line[2]] == current_player:
                 return True
         return False
+    def add_score(self, current_player, storage):
+        if not self.check_winner(self.board, current_player):
+            return
+        if current_player == "X":
+            winner = self.player_X.name
+            loser = self.player_O.name
+            storage[winner]["wins"] += 1
+            storage[loser]["losses"] += 1
+            print("printing players score when player_X won...")
+            console.print(f"Player X {self.player_X.name}'s score: {storage[winner]['wins']}")
+            console.print(f"Player O {self.player_O.name}'s score: {storage[loser]['wins']}")
+        else:
+            winner = self.player_O.name
+            loser = self.player_X.name
+            storage[winner]["wins"] += 1
+            storage[loser]["losses"] += 1
+            print("printing players score when player_O won...")
+            console.print(f"Player X {self.player_X.name}'s score: {storage[loser]['wins']}")
+            console.print(f"Player O {self.player_O.name}'s score: {storage[winner]['wins']}")
 
-    """ The game loop"""
-    
+
+        s.dump_statistics(storage)
+        """ The game loop"""
+        
 
     """ board displaying and colouring """
     def colour_symbol(self, symbol):
@@ -34,19 +54,17 @@ class Game:
         else:
             return f"[yellow]{symbol}[/yellow]"
     def board_display(self):
-
-        print(
+        console.print(
             f"{self.colour_symbol(self.board[0])} "
             "[dim white]─────[/dim white] "
             f"{self.colour_symbol(self.board[1])} "
             "[dim white]─────[/dim white] "
             f"{self.colour_symbol(self.board[2])}"
         )
+        console.print("[dim white]│ \\     │     / │[/dim white]")
+        console.print("[dim white]│   \\   │   /   │[/dim white]")
 
-        print("[dim white]│ \\     │     / │[/dim white]")
-        print("[dim white]│   \\   │   /   │[/dim white]")
-
-        print(
+        console.print(
             f"{self.colour_symbol(self.board[3])} "
             "[dim white]─────[/dim white] "
             f"{self.colour_symbol(self.board[4])} "
@@ -54,10 +72,10 @@ class Game:
             f"{self.colour_symbol(self.board[5])}"
         )
 
-        print("[dim white]│   /   │   \\   │[/dim white]")
-        print("[dim white]│ /     │     \\ │[/dim white]")
+        console.print("[dim white]│   /   │   \\   │[/dim white]")
+        console.print("[dim white]│ /     │     \\ │[/dim white]")
 
-        print(
+        console.print(
             f"{self.colour_symbol(self.board[6])} "
             "[dim white]─────[/dim white] "
             f"{self.colour_symbol(self.board[7])} "
@@ -72,36 +90,41 @@ class Game:
             self.current_player = "X"
 
     """get placement position"""
-    def get_placement_position(self, current_player):
+    def get_placement_position(self, current_player, current_player_name):
         while True:
             raw_placement = console.input(
-                f"Player {self.colour_symbol(current_player)}, "
-                "please select a position to place your stone (1-9): "
-            ).strip()          
+                f"Player {self.colour_symbol(current_player)} "
+                f"({current_player_name})'s Turn — "
+                "[bold white]please select a position to place your stone (1-9):[/bold white] "
+            ).strip()      
             if not raw_placement.isdigit():
                 self.board_display()
-                print("Invalid input. Please enter a valid number between 1 to 9.")
+                print("You entered an invalid digit. Pls enter a valid number from 1 to 9.")
                 continue
             elif int(raw_placement) not in range(1, 10):
                 self.board_display()
-                print("[blink red] Invalid input. Please enter a valid number between 1 to 9.[/blink red]")
+                console.print("[blink red] you entered a number not in board range. Pls enter a valid number btw 1 to 9.[/blink red]")
                 continue
             else:
                 player_position = int(raw_placement) - 1 
                 if self.board[player_position] in ["O", "X"]:
                     self.board_display()
-                    print("[blink red]Spot already occupied. Please enter a number between 1 to 9.[/blink red]")
+                    console.print("[blink red]Spot already occupied. Please enter a number between 1 to 9.[/blink red]")
                     continue
                 return player_position  
-    def get_movement_position(self, current_player, connections):
+    def get_movement_position(self, current_player, current_player_name, connections):
         while True:
-            raw_source = console.input(f"Player {current_player}, please select your stone to move: ").strip()
+            raw_source = console.input(
+                f"Player {self.colour_symbol(current_player)} "
+                f"({current_player_name})'s Turn — "
+                "[bold white]please select a position of your stone (1-9):[/bold white] "
+            ).strip()          
             if not raw_source.isdigit():
-                print("[blink red] Invalid input. Please enter a valid number between 1 to 9.[/blink red]")
+                console.print("[blink red] Invalid input. Please enter a valid number between 1 to 9.[/blink red]")
                 continue
             elif int(raw_source) not in range(1, 10):
                 self.board_display()
-                print("[blink red]Invalid input. Please enter a valid number between 1 to 9.[/blink red]")
+                console.print("[blink red]you entered a number not in board range. Pls enter a valid number btw 1 to 9.[/blink red]")
                 continue
             elif self.board[int(raw_source) - 1] != current_player:
                 self.board_display()
@@ -124,11 +147,11 @@ class Game:
             ).strip()      
             if not raw_destination.isdigit():
                 self.board_display()
-                print("[blink red]Invalid input. Please enter a valid number between 1 to 9.[/blink red]")
+                print("[blink red]You entered an invalid digit. Pls enter a valid number btw 1 to 9.[/blink red]")
                 continue
             elif int(raw_destination) not in range(1, 10):
                 self.board_display()
-                print("[blink red]Invalid input. Please enter a valid number between 1 to 9.[/blink red]")
+                print("[blink red]You entered a number not in board range. Pls enter a valid number btw 1 to 9.[/blink red]")
                 continue
             elif self.board[int(raw_destination) - 1] in ["X", "O"]:
                 self.board_display()
@@ -141,13 +164,21 @@ class Game:
             else:
                 real_destination = int(raw_destination) - 1
                 return real_source, real_destination
-
+    def new_round(self):
+        while True:
+            new_round_input = console.input(f"[bold white] Do you really want to play again!!!: [y/n] [/bold white]")
+            if new_round_input == "yes" or new_round_input == "y":
+                return True
+            elif new_round_input == "no" or new_round_input == "n":
+                console.print("Thank you for playing Stone Lines! Goodbye!", style="bold red on black")
+                return False            
+            else:
+                console.print("Invalid input. Please enter - [yes/no or y/n].", style="bold red on black")
+                continue
 
     def Movement(self, board, current_player):
-        s, d = self.get_movement_position(current_player, c.connections)
-        return s, d 
+        return self.get_movement_position(current_player, self.player_X.name, c.connections)
     """ placement still follows"""
-    def placement(self, current_player):
-        player_position = self.get_placement_position(current_player)
-        print
-        return player_position
+    def placement(self, current_player, current_player_name):
+        return self.get_placement_position(current_player, current_player_name)
+
