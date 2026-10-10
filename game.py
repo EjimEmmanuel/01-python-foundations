@@ -26,24 +26,57 @@ class Game:
         if current_player == "X":
             winner = self.player_X.name
             loser = self.player_O.name
+            storage[winner]["opponents"].setdefault(
+                loser, {"games": 0, "wins": 0, "losses": 0}
+            )
+
+            storage[loser]["opponents"].setdefault(
+                winner, {"games": 0, "wins": 0, "losses": 0}
+            )
+            # Overall statistics when X wins
+            storage[winner]["games"] += 1
             storage[winner]["wins"] += 1
+
+            storage[loser]["games"] += 1
             storage[loser]["losses"] += 1
-            print("printing players score when player_X won...")
+
+
+            ## Statistics against this particular opponent when X wins
+            storage[winner]["opponents"][loser]["games"] += 1
+            storage[winner]["opponents"][loser]["wins"] += 1
+
+            storage[loser]["opponents"][winner]["games"] += 1
+            storage[loser]["opponents"][winner]["losses"] += 1
             console.print(f"Player X {self.player_X.name}'s score: {storage[winner]['wins']}")
             console.print(f"Player O {self.player_O.name}'s score: {storage[loser]['wins']}")
         else:
             winner = self.player_O.name
             loser = self.player_X.name
+            storage[winner]["opponents"].setdefault(
+                 loser, {"games": 0, "wins": 0, "losses": 0}
+             )
+ 
+            storage[loser]["opponents"].setdefault(
+                 winner, {"games": 0, "wins": 0, "losses": 0}
+             )
+             # Overall statistics when O wins
+            storage[winner]["games"] += 1
             storage[winner]["wins"] += 1
+ 
+            storage[loser]["games"] += 1
             storage[loser]["losses"] += 1
-            print("printing players score when player_O won...")
+ 
+ 
+             ## Statistics against this particular opponent when O wins
+            storage[winner]["opponents"][loser]["games"] += 1
+            storage[winner]["opponents"][loser]["wins"] += 1
+ 
+            storage[loser]["opponents"][winner]["games"] += 1
+            storage[loser]["opponents"][winner]["losses"] += 1
             console.print(f"Player X {self.player_X.name}'s score: {storage[loser]['wins']}")
             console.print(f"Player O {self.player_O.name}'s score: {storage[winner]['wins']}")
-
-
         s.dump_statistics(storage)
-        """ The game loop"""
-        
+        """ The game loop"""        
 
     """ board displaying and colouring """
     def colour_symbol(self, symbol):
@@ -141,7 +174,8 @@ class Game:
         while True:
             self.board_display()
             raw_destination = console.input(
-                f"Player {self.colour_symbol(current_player)}: "
+                f"Player {self.colour_symbol(current_player)} "
+                f"({current_player_name})'s Turn — "
                 f"please select your stone's destination: "
                 f"[dim yellow]available destinations: [/dim yellow][bold yellow]{available_destinations}[/bold yellow]: "
             ).strip()      
@@ -175,10 +209,12 @@ class Game:
             else:
                 console.print("Invalid input. Please enter - [yes/no or y/n].", style="bold red on black")
                 continue
-
-    def Movement(self, board, current_player):
-        return self.get_movement_position(current_player, self.player_X.name, c.connections)
+        
+    def Movement(self, current_player):
+        return self.get_movement_position(current_player, self.player_X.name if self.current_player == "X" else self.player_O.name , c.connections)
     """ placement still follows"""
     def placement(self, current_player, current_player_name):
         return self.get_placement_position(current_player, current_player_name)
+
+
 

@@ -1,92 +1,84 @@
 {
-    "emmaaafa": {
-        "wins": 0,
-        "losses": 0,
-        "draws": 0
-    },
-    "affadfadf": {
-        "wins": 0,
-        "losses": 0,
-        "draws": 0
-    },
     "emmanuel": {
-        "wins": 0,
-        "losses": 1,
-        "draws": 0
-    },
-    "onyedikachi": {
-        "wins": 0,
-        "losses": 0,
-        "draws": 0
-    },
-    "wewewewewe": {
-        "wins": 0,
-        "losses": 0,
-        "draws": 0
-    },
-    "sddsdds": {
-        "wins": 0,
-        "losses": 0,
-        "draws": 0
-    },
-    "messi": {
-        "wins": 2,
+        "games": 6,
+        "wins": 1,
         "losses": 5,
-        "draws": 0
-    },
-    "ronaldo": {
-        "wins": 5,
-        "losses": 1,
-        "draws": 0
-    },
-    "nmnmnm": {
-        "games": 0,
-        "wins": 0,
-        "losses": 0
-    },
-    "vbbvbv": {
-        "games": 0,
-        "wins": 0,
-        "losses": 0
-    },
-    "popopo": {
-        "games": 0,
-        "wins": 0,
-        "losses": 2
-    },
-    "lololo": {
-        "games": 0,
-        "wins": 2,
-        "losses": 0
-    },
-    "popo": {
-        "games": 0,
-        "wins": 1,
-        "losses": 2
-    },
-    "lolo": {
-        "games": 0,
-        "wins": 3,
-        "losses": 1
-    },
-    "ppop": {
-        "games": 0,
-        "wins": 0,
-        "losses": 1
-    },
-    "dssdd": {
-        "games": 0,
-        "wins": 0,
-        "losses": 1
-    },
-    "weewew": {
-        "games": 0,
-        "wins": 1,
-        "losses": 0
+        "opponents": {
+            "chioma": {
+                "games": 3,
+                "wins": 1,
+                "losses": 2
+            },
+            "boss": {
+                "games": 1,
+                "wins": 0,
+                "losses": 1
+            },
+            "onyedikachi": {
+                "games": 2,
+                "wins": 0,
+                "losses": 2
+            }
+        }
     },
     "chioma": {
-        "games": 0,
+        "games": 3,
+        "wins": 2,
+        "losses": 1,
+        "opponents": {
+            "emmanuel": {
+                "games": 3,
+                "wins": 2,
+                "losses": 1
+            }
+        }
+    },
+    "boss": {
+        "games": 1,
         "wins": 1,
-        "losses": 0
+        "losses": 0,
+        "opponents": {
+            "emmanuel": {
+                "games": 1,
+                "wins": 1,
+                "losses": 0
+            }
+        }
+    },
+    "onyedikachi": {
+        "games": 2,
+        "wins": 2,
+        "losses": 0,
+        "opponents": {
+            "emmanuel": {
+                "games": 2,
+                "wins": 2,
+                "losses": 0
+            }
+        }
+    },
+    "Emmanuel": {
+        "games": 1,
+        "wins": 1,
+        "losses": 0,
+        "opponents": {
+            "Chioma": {
+                "games": 1,
+                "wins": 1,
+                "losses": 0
+            }
+        }
+    },
+    "Chioma": {
+        "games": 1,
+        "wins": 0,
+        "losses": 1,
+        "opponents": {
+            "Emmanuel": {
+                "games": 1,
+                "wins": 0,
+                "losses": 1
+            }
+        }
     }
 }

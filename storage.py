@@ -2,9 +2,9 @@ import json
 
 FILE_PATH = "data/statistics.json"
 
-def dump_statistics(statistics):
+def dump_statistics(statistics, file_path=FILE_PATH):                    
     try:
-        with open(FILE_PATH, "w") as f:
+        with open(file_path, "w") as f:
             return json.dump(statistics, f, indent=4)
     except FileExistsError:
         return {}
@@ -12,9 +12,9 @@ def dump_statistics(statistics):
         return {}
 
     
-def initialize_statistics():
+def initialize_statistics(file_path=FILE_PATH):
     try:
-        with open(FILE_PATH, "r") as f:
+        with open(file_path, "r") as f:
             return json.load(f)
     except FileNotFoundError:
         return {}

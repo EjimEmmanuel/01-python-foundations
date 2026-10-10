@@ -43,21 +43,19 @@ def Placement_loop(gameClass, just_storage):
             won_lines = [num + 1 for line in c.winning_lines if all(gameClass.board[pos] == gameClass.current_player for pos in line) for num in line]
             console.print(f"Player {gameClass.current_player} wins on board positions: {won_lines }!", style="bold blue on black")
             gameClass.add_score(gameClass.current_player, just_storage)
-            time.sleep(2)
-            if gameClass.new_round():
-                run_game()
-            else:
-                exit()
+            return True
+            """changed code here"""
         else:
             console.print(f"Player {gameClass.current_player} has not won yet. The game continues.")
             console.print("Placement phase is over. Moving to movement phase.")
     gameClass.switch_player()
+    return False
 
 def Movement_loop(gameClass, just_storage):
     gameClass.current_phase = "movement"
     console.print(f"[dim White]Movement phase is onging...[/dim White]")
     gameClass.board_display()
-    player_source, player_destination = gameClass.Movement(gameClass.board, gameClass.current_player)
+    player_source, player_destination = gameClass.Movement(gameClass.current_player)
     gameClass.board[player_source] = str(player_source + 1)
     gameClass.board[player_destination] = gameClass.current_player
     gameClass.board_display()
@@ -68,12 +66,7 @@ def Movement_loop(gameClass, just_storage):
         won_lines = [num + 1 for line in c.winning_lines if all(gameClass.board[pos] == gameClass.current_player for pos in line) for num in line]
         console.print(f"Player {gameClass.current_player} wins on board positions: {won_lines}!", style="bold blue on black")
         gameClass.add_score(gameClass.current_player, just_storage)
-        console.print()
-        time.sleep(2)
-        if gameClass.new_round():
-            run_game()
-        else:
-            exit()
+        return True
     else:
         gameClass.switch_player()
         return False
@@ -83,19 +76,31 @@ def run_game():
     storage = s.initialize_statistics()
     gameClass = create_game()
     if gameClass.player_X.name not in storage:
-        storage[gameClass.player_X.name] = {"games": 0, "wins": 0, "losses": 0}
+        storage[gameClass.player_X.name] = {"games": 0,
+                                             "wins": 0, 
+                                             "losses": 0 ,
+                                             "opponents": {}
+                                             }
     if gameClass.player_O.name not in storage:
-        storage[gameClass.player_O.name] = {"games": 0, "wins": 0, "losses": 0}
+        storage[gameClass.player_O.name] =  {"games": 0, "wins": 0, "losses": 0 ,"opponents": {}
+                                             }
     s.dump_statistics(storage)
-    while True:
-        print("[bold blue]STONE LINES[/bold blue]")
-        if gameClass.stone_placed < 6:
-            Placement_loop(gameClass, storage)
-        elif gameClass.stone_placed == 6 and not gameClass.check_winner(gameClass.board, gameClass.current_player):
-            print("[dim white]Movement phase is going on...[/dim white]")
-            Movement_loop(gameClass, storage)
-            continue
+    while True:  # Controls replaying rounds
+        round_finished = False
+        while not round_finished: 
+            print("[bold blue]STONE LINES[/bold blue]")
+            if gameClass.stone_placed < 6:
+                round_finished = Placement_loop(gameClass, storage)
+            else:
+                round_finished = Movement_loop(gameClass, storage)
 
+        if gameClass.new_round():
+            gameClass = create_game(
+                gameClass.player_X,
+                gameClass.player_O
+            )
+        else:
+            break
 def main():
     console.print("WELCOME TO STONE LINES", style="bold red on white")
     print("")
@@ -119,7 +124,5 @@ def main():
         else:
             print("Invalid option. Please choose 1, 2, or 3.")
             continue
-
-
 if __name__ == "__main__":  
     main()
