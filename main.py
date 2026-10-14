@@ -1,4 +1,3 @@
-import time
 import game 
 import constant as c
 from rich import print
@@ -70,7 +69,6 @@ def Movement_loop(gameClass, just_storage):
     else:
         gameClass.switch_player()
         return False
-
 
 def run_game():
     storage = s.initialize_statistics()
