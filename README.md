@@ -34,3 +34,7 @@ To run the test suite, execute:
 ```bash
 pytest -v
 ```
+
+## Week 6 — Rule-Based AI
+
+The Week 6 student materials and prepared Stone Lines starter are in [`Week_06/START_HERE.md`](Week_06/START_HERE.md). Week 6 builds on the Week 5 game in the `master` history. Use the `week-6-work` branch for the student's implementation; see [`Week_06/GIT_WORKFLOW.md`](Week_06/GIT_WORKFLOW.md) for the branch and commit steps. The teacher's answers and completed reference solution are kept outside this repository.
