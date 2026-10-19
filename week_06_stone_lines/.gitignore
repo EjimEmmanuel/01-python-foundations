@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.coverage
+*.tmp
+.DS_Store
+# Runtime statistics are local and ignored.
+data/statistics.json
