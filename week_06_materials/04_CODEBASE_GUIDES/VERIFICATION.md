@@ -6,7 +6,7 @@ This stage tests the **prepared game engine and application foundation**, not th
 
 ## Reproduction
 
-Run these commands from the `stone-lines-arena/` root in a fresh virtual environment:
+Run these commands from the repository root in a fresh virtual environment:
 
 ```bash
 python -m pip install -r requirements.txt
@@ -39,11 +39,7 @@ The included tests cover:
 ## Explicit limitations of Stage 1
 
 - Random and rule-based computer strategies are **not** implemented.
-- Full Week 6 educational readings, exercises, task instructions and final reference strategy implementation are **not** included.
+- Week 6 student readings, exercises and task instructions are in `week_06_materials/`. The teacher-only reference strategy implementation is kept outside this repository.
 - Repeated movement positions are not yet automatically treated as a draw. Use `quit` to cancel a looping game; repetition policy can be discussed before game-tree search in later lessons.
 - A normal game has six stones and only limited move combinations; this is a teaching project, not a rated competitive-game engine.
-- This package starts with a blank statistics file to protect the student's original data.
-
-## QA status
-
-The following values are filled after the final validation and ZIP test. See `QA_RESULTS.txt` in the archive root for machine-checked counts and checksum.
+- Statistics are created locally after a completed match and are ignored by Git, so the original player's data is not bundled.

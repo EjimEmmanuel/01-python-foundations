@@ -99,7 +99,7 @@ The AI strategies should **read** these values, not assign to them on the actual
 | `score_action(game, action)` | Assign a heuristic numeric score to a legal action | number |
 | `choose_rule_based_action(game)` | Combine priority rules and fallback | legal action or `None` |
 
-In the **student starter**, these functions raise `NotImplementedError`. The complete algorithmic steps, tie-break rules and acceptance examples are now available in `student/03_PROJECT/` of the supplied learning package. Do not invent extra strategy classes or rewrite the engine.
+In the **student starter**, these functions raise `NotImplementedError`. The complete algorithmic steps, tie-break rules and acceptance examples are in `week_06_materials/03_PROJECT/`. Do not invent extra strategy classes or rewrite the engine.
 
 ### Important distinction
 

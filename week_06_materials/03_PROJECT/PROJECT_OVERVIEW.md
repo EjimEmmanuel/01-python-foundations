@@ -12,9 +12,9 @@ Extend the **provided** Stone Lines application, not the old Week 5 ZIP. The eng
 **The learning focus:** Choose actions using randomness, immediate-win rules, immediate-threat prevention and simple heuristic scoring. You are not writing a new game or training an ML model.
 
 ## What you receive
-The one folder to copy into your own workspace is `../04_STARTER_CODE/stone-lines-arena/`. Its strategy functions deliberately raise `NotImplementedError` at the beginning. This is expected.
+The prepared application is already at the repository root. Its strategy functions deliberately raise `NotImplementedError` at the beginning. This is expected.
 
-The original 48 infrastructure tests should pass before you implement anything. The additional gate tests live inside the starter folder under `challenge_tests/`; they intentionally do not run during the default baseline test command.
+The original 48 infrastructure tests should pass before you implement anything. The additional gate tests live at the repository root under `challenge_tests/`; they intentionally do not run during the default baseline test command.
 
 ## Your scope
 **Edit:** `stone_lines/computer.py`, with student-authored tests in `tests/test_computer.py` and a brief update to `README.md` at release.

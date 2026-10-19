@@ -1,9 +1,0 @@
-.venv/
-__pycache__/
-.pytest_cache/
-*.py[cod]
-.coverage
-*.tmp
-.DS_Store
-# Runtime statistics should remain local (the blank starter file is included once).
-data/statistics.json

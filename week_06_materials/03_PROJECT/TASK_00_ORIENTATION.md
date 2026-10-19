@@ -4,12 +4,12 @@
 
 **Objective:** Understand the engineering foundation prepared from your Week 5 project. **No refactoring and no implementation yet.**
 
-1. Open `../04_STARTER_CODE/stone-lines-arena/`; copy it to a new working directory (do not edit the distributed starter directly).
-2. From the copied project, read `README.md`, `docs/CODEBASE_CHANGES.md` and `docs/ARCHITECTURE_AND_API.md` in that order.
+1. Open the repository root. The prepared Week 6 codebase is already there; do not make a second copy.
+2. Read the root `README.md`, `week_06_materials/04_CODEBASE_GUIDES/CODEBASE_CHANGES.md` and `week_06_materials/04_CODEBASE_GUIDES/ARCHITECTURE_AND_API.md` in that order.
 3. Find `get_legal_actions`, `apply_action`, `copy` and `preview_action` in `stone_lines/game.py`. Explain what each returns or changes.
 4. Find the application mode selection in `stone_lines/app.py`. Observe where the future computer decisions are requested.
 5. Find the five unfinished functions in `stone_lines/computer.py`. Do not modify them yet.
-6. Install dependencies into a virtual environment using the project README. Run `python -m pytest -q` from the project root. The prepared infrastructure tests should pass.
+6. Install dependencies into a virtual environment using the root README. Run `python -m pytest -q` from the repository root. The prepared infrastructure tests should pass.
 7. Run `python main.py`; complete or demonstrate Human vs Human. Computer modes will say their strategy is not yet implemented. This is expected.
 8. Draw the flow: game state → legal actions → strategy → selected tuple → engine execution → UI.
 
@@ -17,4 +17,4 @@
 
 **Teacher checkpoint:** Point to each file, show the baseline tests and explain why a strategy must *return* actions rather than *apply* them. Distinguish display labels 1–9 from indexes 0–8. Proceed only when this is clear.
 
-**Suggested commit (your working repository):** `chore: begin week 6 from prepared baseline`. If your archive has no Git history, create your own local branch/repository after following the teacher's instructions; do not invent prior commits.
+**Suggested commit:** `chore: begin week 6 from prepared baseline`.

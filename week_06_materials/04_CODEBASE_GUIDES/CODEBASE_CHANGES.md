@@ -1,7 +1,7 @@
 # Week 6 Codebase Changes — What Changed and Why
 
 **Source:** `01-python-foundations-master.zip` (student Week 5 submission)  
-**Destination:** `stone-lines-arena/` (prepared Week 6 baseline)  
+**Destination:** repository root (prepared Week 6 baseline)
 **Scope:** Engineering preparation and reliability fixes only. No Week 6 AI algorithms are implemented.
 
 ## 1. Why we prepared the code
@@ -25,9 +25,9 @@ This is **not a criticism of the original work**. The changes are a normal step 
 | *(new)* | `stone_lines/computer.py` | Added five named **unfinished functions** with signatures and explanations | Defines where Week 6 decision rules will be written |
 | `Tests/test_game.py` | `tests/` | Replaced input-coupled and live-file-dependent tests with isolated tests of the new engine, storage and application | Baseline correctness can be checked without prompts or modifying personal records |
 | `Texts/requirements.txt` | `requirements.txt` | Replaced prose/invalid pip entries with installable requirements | `pip install -r requirements.txt` works |
-| `README.md` | `README.md` + `docs/` | Added correct launch commands, structure, rules, boundaries and verification guidance | The student knows how to use the new codebase |
-| `Notes/*.md` | `prior_notes/*.md` | Copied original learning notes **unchanged** | Preserves learning history without making it a new task |
-| `data/statistics.json` | `data/statistics.json` | Replaced original player data with an empty starter object `{}` | Protects personal records and avoids starting the new package with someone else's match history |
+| `README.md` | `README.md` + `week_06_materials/04_CODEBASE_GUIDES/` | Added correct launch commands, structure, rules, boundaries and verification guidance | The student knows how to use the new codebase |
+| `Notes/*.md` | `week_06_materials/prior_notes/*.md` | Copied original learning notes **unchanged** | Preserves learning history without making it a new task |
+| `data/statistics.json` | `data/statistics.json` (created after the first completed match) | Left the original player data out of the repository | Protects personal records and avoids starting the new package with someone else's match history |
 
 ## 3. The most important change — input no longer controls the game rules
 
@@ -110,6 +110,6 @@ Computer modes are visible in the menu but are not functional yet. The applicati
 1. **Read** the codebase guide; do not immediately rewrite the files.
 2. **Run** Human vs Human and the baseline tests.
 3. **Understand** that `app.py` coordinates turns, `game.py` owns rules, `ui.py` handles input/display, and `computer.py` will choose actions.
-4. **Wait** for the separate Week 6 reading package and task contracts before implementing strategies.
+4. Read `week_06_materials/` and complete its reading stage before implementing strategies.
 
 The teacher should not grade the student on whether they could have independently performed this preparation refactor. This engineering preparation is explicitly provided so the student can focus on decision-making in Week 6.

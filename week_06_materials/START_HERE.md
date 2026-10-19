@@ -2,9 +2,9 @@
 
 **Week 6: Decision-Making and Rule-Based AI**
 
-For the pre-created repository branches and the separate coding copy, read [`GIT_WORKFLOW.md`](GIT_WORKFLOW.md). Complete the reading stage and receive teacher approval before editing the project.
+Read [`GIT_WORKFLOW.md`](GIT_WORKFLOW.md) for the branch setup. The prepared Week 6 codebase is at the repository root, and all Week 6 learning materials are together in this folder. Complete the reading stage and receive teacher approval before editing code.
 
-This folder is the **only course folder the teacher should share with you**. It includes your complete reading path, exercises, fixed project tasks, starter project and assessment instructions. No teacher answers or finished strategies are included here.
+This folder contains the complete Week 6 reading path, exercises, fixed project tasks, prior learning notes and assessment instructions. No teacher answers or finished strategies are included here.
 
 ## First: know what is inside the folder
 
@@ -20,7 +20,9 @@ This folder is the **only course folder the teacher should share with you**. It 
 | `03_PROJECT/IMPLEMENTATION_RULES.md` | Mandatory architecture, action representation, scoring, tie-breaks and restrictions | Read before Task 00 and keep open during coding |
 | `03_PROJECT/TASK_00...TASK_06` | Seven ordered tasks with exact file/function requirements | Complete **one at a time** |
 | `03_PROJECT/FINAL_ACCEPTANCE_CHECKLIST.md` | Final functionality and structure checks | After Task 06; preview before project work |
-| `04_STARTER_CODE/stone-lines-arena/` | Your prepared working application; AI strategies intentionally unfinished | Copy to your own workspace at Task 00 |
+| `04_CODEBASE_GUIDES/` | Code changes, architecture/API and verification guides | Read during Task 00 |
+| [`../README.md`](../README.md) (repository root) | Prepared working application; AI strategies intentionally unfinished | Inspect after the reading stage; edit only as the project tasks allow |
+| `prior_notes/` | Your earlier Stone Lines learning notes | Optional reference |
 | `05_ASSESSMENT/REFLECTION.md` | Final explanation of what you learned and built | After final demonstration |
 
 ## Stage A — Read and understand
@@ -35,8 +37,8 @@ This folder is the **only course folder the teacher should share with you**. It 
 ## Stage B — Prepare the existing project (not a rebuild)
 
 7. Open `03_PROJECT/PROJECT_OVERVIEW.md` and `03_PROJECT/IMPLEMENTATION_RULES.md`.
-8. Open `03_PROJECT/TASK_00_ORIENTATION.md`. This tells you how to copy `04_STARTER_CODE/stone-lines-arena/` to a separate working directory, read its change docs, install dependencies and run its baseline tests.
-9. Do not edit the original Week 5 submission or the distributed starter folder. Work in the **copy** you made in step 8.
+8. Open `03_PROJECT/TASK_00_ORIENTATION.md`. It guides you through the codebase at the repository root, its technical documents, dependency setup and baseline checks.
+9. Keep all Week 6 code in this repository. Do not change the game engine, UI, storage, constants or supplied tests.
 
 ## Stage C — Implement in order
 
@@ -52,7 +54,7 @@ This folder is the **only course folder the teacher should share with you**. It 
 
 ## What the project folders inside the codebase mean
 
-Inside your working copy of `stone-lines-arena/`:
+At the repository root:
 
 | File/folder | Purpose | Edit for Week 6? |
 |---|---|---|
@@ -66,15 +68,14 @@ Inside your working copy of `stone-lines-arena/`:
 | **`stone_lines/computer.py`** | Five strategies and specified private helper | **YES** |
 | `tests/` | Existing tests; add your own `test_computer.py` | Yes, new test file only |
 | `challenge_tests/` | Provided gate-specific verification tests and helper; run them separately | No, do not edit |
-| `docs/CODEBASE_CHANGES.md` | What the teacher prepared and why | Read, do not edit |
-| `docs/ARCHITECTURE_AND_API.md` | Exact game/strategy contracts | Read, do not edit |
-| `data/statistics.json` | Match data; use only test-safe data in automated checks | Let application manage |
-| `prior_notes/` | Your earlier learning notes | Optional reference |
+| `week_06_materials/04_CODEBASE_GUIDES/CODEBASE_CHANGES.md` | What the teacher prepared and why | Read, do not edit |
+| `week_06_materials/04_CODEBASE_GUIDES/ARCHITECTURE_AND_API.md` | Exact game/strategy contracts | Read, do not edit |
+| `data/statistics.json` | Local match data created by the application | Let application manage |
 | `README.md` | Install instructions and application overview | Update after Task 06 |
 | `requirements.txt`, `pytest.ini`, `.gitignore` | Dependencies, tests, ignored local files | No |
 
 ## How to run tests
-After copying the starter and setting up your `.venv`, from your **working project root**:
+After setting up your `.venv`, from the **repository root**:
 
 ```bash
 python -m pytest -q

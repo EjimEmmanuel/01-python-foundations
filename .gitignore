@@ -5,5 +5,5 @@ __pycache__/
 .coverage
 *.tmp
 .DS_Store
-# Runtime statistics should remain local (the blank starter file is included once).
+# Runtime statistics are local and ignored.
 data/statistics.json
