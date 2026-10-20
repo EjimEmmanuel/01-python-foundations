@@ -23,7 +23,7 @@ git pull --ff-only
 cd week_06_stone_lines
 ```
 
-Begin with `week_06_materials/START_HERE.md`. Complete all readings and the knowledge check, then wait for teacher approval before editing code.
+Begin with `week_06_materials/START_HERE.md` and Chapters 1–2. With the teacher's kickoff, complete Task 00 orientation and baseline checks. Read the chapters listed under each later task before doing it, and revisit them as needed. The full knowledge check is reviewed before Tasks 05–06; it is not necessary to finish every reading before starting the project. Wait for teacher sign-off at each task checkpoint before moving on.
 
 ## Work and commit
 

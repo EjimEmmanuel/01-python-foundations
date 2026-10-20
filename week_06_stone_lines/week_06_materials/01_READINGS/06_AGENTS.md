@@ -1,6 +1,6 @@
 # Reading 6 — Agents and the Observe–Decide–Act Cycle
 
-**Week 6 · Required reading · Read before project work**
+**Week 6 · Required reading · Read before the tasks that use these ideas; revisit as needed**
 
 ## Learning goals
 Define an agent, environment, observation, action, goal and policy; describe agent-environment interaction; and recognize that agents can use rules without ML.

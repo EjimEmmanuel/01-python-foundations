@@ -101,7 +101,7 @@ score_action(game, action)
 choose_rule_based_action(game)
 ```
 
-These are not missing infrastructure or unfinished cleanup. They are the intended Week 6 educational work, after the readings and detailed implementation tasks have been delivered.
+These are not missing infrastructure or unfinished cleanup. They are the intended Week 6 educational work, completed as you reach the related readings and detailed implementation tasks.
 
 Computer modes are visible in the menu but are not functional yet. The application reports this cleanly when selected.
 
@@ -110,6 +110,6 @@ Computer modes are visible in the menu but are not functional yet. The applicati
 1. **Read** the codebase guide; do not immediately rewrite the files.
 2. **Run** Human vs Human and the baseline tests.
 3. **Understand** that `app.py` coordinates turns, `game.py` owns rules, `ui.py` handles input/display, and `computer.py` will choose actions.
-4. Read `week_06_materials/` and complete its reading stage before implementing strategies.
+4. Use `week_06_materials/START_HERE.md` and the Project Guide to follow the reading rhythm. Read the chapters listed by each task before that stage and return to the material as needed; all seven readings do not have to be completed before Task 00 or Task 01.
 
 The teacher should not grade the student on whether they could have independently performed this preparation refactor. This engineering preparation is explicitly provided so the student can focus on decision-making in Week 6.

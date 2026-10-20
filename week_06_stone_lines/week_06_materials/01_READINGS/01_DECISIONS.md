@@ -1,6 +1,6 @@
 # Reading 1 — How Software Makes Decisions
 
-**Week 6 · Required reading · Read before project work**
+**Week 6 · Required reading · Read before the tasks that use these ideas; revisit as needed**
 
 ## Learning goals
 By the end of this chapter, you should explain a **condition**, **decision**, **action**, **strategy**, **priority** and **fallback**; trace the order in which rules run; and design a small decision system without writing code first.

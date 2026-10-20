@@ -1,6 +1,6 @@
 # Week 6 Project Guide — Stone Lines Computer Opponent
 
-**Read this only after completing the reading stage and receiving teacher approval.** The reading stage is described in [`../START_HERE.md`](../START_HERE.md).
+Start this guide after reading Chapters 1–2 and getting the teacher's kickoff for Task 00. You do not need to finish all seven readings first. Follow each task's **Required reading** and return to the chapters as you work; [`../START_HERE.md`](../START_HERE.md) explains the reading rhythm.
 
 ## What you will build
 

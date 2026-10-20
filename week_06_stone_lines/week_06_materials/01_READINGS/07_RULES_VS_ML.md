@@ -1,6 +1,6 @@
 # Reading 7 — Rule-Based AI Is Not Machine Learning
 
-**Week 6 · Required reading · Read before project work**
+**Week 6 · Required reading · Read before the tasks that use these ideas; revisit as needed**
 
 ## Learning goals
 Explain explicit rules versus learned models; choose a reasonable technique for a simple problem; and explain why Week 6's computer agent is not an ML model.

@@ -1,6 +1,6 @@
 # Reading 4 — Rule-Based Decisions and Priorities
 
-**Week 6 · Required reading · Read before project work**
+**Week 6 · Required reading · Read before the tasks that use these ideas; revisit as needed**
 
 ## Learning goals
 Write ordered rule systems, identify priority conflicts, recognize immediate opportunities and threats, and distinguish a helper rule from the complete decision strategy.

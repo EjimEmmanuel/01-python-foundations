@@ -1,6 +1,6 @@
 # Reading 3 — Random Choices and Baseline Strategies
 
-**Week 6 · Required reading · Read before project work**
+**Week 6 · Required reading · Read before the tasks that use these ideas; revisit as needed**
 
 ## Learning goals
 Use `random.choice()` safely, understand what randomness can and cannot do, describe a baseline strategy, and make small randomized programs reproducible for debugging.

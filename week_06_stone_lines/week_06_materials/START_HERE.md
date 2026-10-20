@@ -2,7 +2,7 @@
 
 **Week 6: Decision-Making and Rule-Based AI**
 
-Read [`GIT_WORKFLOW.md`](GIT_WORKFLOW.md) for the branch setup. The prepared Week 6 codebase is at the root of `week_06_stone_lines/`, and all Week 6 learning materials are together in this folder. Complete the reading stage and receive teacher approval before editing code.
+Read [`GIT_WORKFLOW.md`](GIT_WORKFLOW.md) for the branch setup. The prepared Week 6 codebase is at the root of `week_06_stone_lines/`, and all Week 6 learning materials are together in this folder. Start with Chapters 1–2, then use the project tasks to guide the rest of your reading. You do not have to finish every chapter before the project begins; read, explain, and revisit material as each stage needs it. Teacher checkpoints still apply before you move from one project task to the next.
 
 This folder contains the complete Week 6 reading path, exercises, fixed project tasks, prior learning notes and assessment instructions. No teacher answers or finished strategies are included here.
 
@@ -12,44 +12,43 @@ This folder contains the complete Week 6 reading path, exercises, fixed project 
 |---|---|---|
 | `START_HERE.md` | The complete navigation map you are reading | First; return when unsure |
 | `01_READINGS/READING_MAP.md` | Reading order and study method | Before chapter 1 |
-| `01_READINGS/01_...` through `07_...` | Seven self-contained lessons on decisions, states, random strategies, rule systems, heuristics, agents and ML distinction | Read in numeric order |
+| `01_READINGS/01_...` through `07_...` | Seven self-contained lessons on decisions, states, random strategies, rule systems, heuristics, agents and ML distinction | Start with Chapters 1–2; read the chapters named by each task and return as needed |
 | `01_READINGS/REFERENCES.md` | Official references and optional follow-up study | During the readings; focus on specified sections |
-| `02_PRACTICE/PREPROJECT_WORKED_EXAMPLES.md` | Non-game examples and independent exercises | After readings 1–7; before knowledge check |
-| `02_PRACTICE/KNOWLEDGE_CHECK.md` | Assessment of concepts before programming | After all readings and examples |
-| `03_PROJECT/PROJECT_OVERVIEW.md` | What the Stone Lines update must deliver | **Only after teacher approves knowledge check** |
-| `03_PROJECT/PROJECT_GUIDE.md` | The project entry point, task order, checkpoints and code boundaries | **Only after teacher approval** |
+| `02_PRACTICE/PREPROJECT_WORKED_EXAMPLES.md` | Non-game examples and independent exercises | Use after related chapters or when a concept needs another example |
+| `02_PRACTICE/KNOWLEDGE_CHECK.md` | Diagnostic questions to check and revisit understanding | Work through it as you read; review the full check before Tasks 05–06 |
+| `03_PROJECT/PROJECT_OVERVIEW.md` | What the Stone Lines update must deliver | With the Project Guide after Chapters 1–2 and teacher kickoff |
+| `03_PROJECT/PROJECT_GUIDE.md` | The project entry point, task order, checkpoints and code boundaries | After the initial reading and teacher kickoff; keep using it during the project |
 | `03_PROJECT/IMPLEMENTATION_RULES.md` | Mandatory architecture, action representation, scoring, tie-breaks and restrictions | Read before Task 00 and keep open during coding |
 | `03_PROJECT/TASK_00...TASK_06` | Seven ordered tasks with exact file/function requirements | Complete **one at a time** |
 | `03_PROJECT/FINAL_ACCEPTANCE_CHECKLIST.md` | Final functionality and structure checks | After Task 06; preview before project work |
-| `04_CODEBASE_GUIDES/` | Code changes, architecture/API and verification guides | Read during Task 00 |
-| [`../README.md`](../README.md) (Week 6 folder root) | Prepared working application; AI strategies intentionally unfinished | Inspect after the reading stage; edit only as the project tasks allow |
-| `prior_notes/` | Your earlier Stone Lines learning notes | Optional reference |
+| `04_CODEBASE_GUIDES/` | Code changes, architecture/API and verification guides | During Task 00: changes guide first, then architecture/API; use verification when checking the baseline |
+| [`../README.md`](../README.md) (Week 6 folder root) | Prepared working application; AI strategies intentionally unfinished | Read during Task 00 before the codebase guides; edit only as the project tasks allow |
+| `prior_notes/` | Your earlier Stone Lines learning notes | Optional Week 5 background; follow this Week 6 guide and task files for current instructions |
 | `05_ASSESSMENT/REFLECTION.md` | Final explanation of what you learned and built | After final demonstration |
 
-## Stage A — Read and understand
+## Stage A — Start reading and orient yourself
 
 1. Open `01_READINGS/READING_MAP.md`.
-2. Read Chapters **01, 02, 03, 04, 05, 06, 07 in that exact order**. Keep a notebook; answer chapter questions.
-3. Read `01_READINGS/REFERENCES.md` for focused official-source review. These links are supplementary; the provided chapters are required.
-4. Work through `02_PRACTICE/PREPROJECT_WORKED_EXAMPLES.md`, including its independent exercises.
-5. Complete `02_PRACTICE/KNOWLEDGE_CHECK.md` and discuss your answers with the teacher.
-6. **Stop here until the teacher says the reading stage is complete.**
+2. Read Chapters **01 and 02** first. Keep notes, answer their questions, and explain the ideas in your own words.
+3. With your teacher's kickoff, continue to the Project Guide and Task 00. Task 00 is codebase orientation, not strategy coding.
+4. During Task 00, read the Week 6 README, then `04_CODEBASE_GUIDES/CODEBASE_CHANGES.md`, then `ARCHITECTURE_AND_API.md`. The changes guide tells you what the teacher prepared or changed; the architecture guide explains the code and its contracts. Use `VERIFICATION.md` for the baseline check.
 
-## Stage B — Prepare the existing project (not a rebuild)
+## Stage B — Read alongside the project
 
-7. Open `03_PROJECT/PROJECT_GUIDE.md`, then read `03_PROJECT/PROJECT_OVERVIEW.md` and `03_PROJECT/IMPLEMENTATION_RULES.md`.
-8. Open `03_PROJECT/TASK_00_ORIENTATION.md`. It guides you through the codebase at the root of `week_06_stone_lines/`, its technical documents, dependency setup and baseline checks.
-9. Keep all Week 6 code in this repository. Do not change the game engine, UI, storage, constants or supplied tests.
+5. Before each task, read its **Required reading** chapters and explain the relevant ideas. Task 01 calls for Chapters 2–3; Tasks 02–03 call for Chapter 4; Task 04 calls for Chapter 5; Task 05 calls for Chapters 1 and 4–7.
+6. Use the worked examples and knowledge check as practice while learning. You may return to a chapter, example, or question whenever you need to strengthen your understanding. The full knowledge check is a review before Tasks 05–06, not a requirement to finish every reading before Task 00 or Task 01.
+7. Open `03_PROJECT/PROJECT_GUIDE.md`, `PROJECT_OVERVIEW.md`, and `IMPLEMENTATION_RULES.md` as you begin Task 00; keep them available throughout the work.
+8. Keep all Week 6 code in this repository. Do not change the game engine, UI, storage, constants or supplied tests.
 
-## Stage C — Implement in order
+## Stage C — Implement in order, returning to the readings
 
-10. Task 01: random chooser → run Gate 1 tests → get teacher sign-off.
-11. Task 02: immediate win → run Gate 2 tests → sign-off.
-12. Task 03: immediate defence → run Gate 3 tests → sign-off.
-13. Task 04: heuristic score → run Gate 4 tests → sign-off.
-14. Task 05: combine priority strategy → run all five gate test files → sign-off.
-15. Task 06: full application demonstration, own tests, README, Git history → final sign-off.
-16. Complete `05_ASSESSMENT/REFLECTION.md`.
+9. Task 01: random chooser → run Gate 1 tests → get teacher sign-off.
+10. Task 02: immediate win → run Gate 2 tests → sign-off.
+11. Task 03: immediate defence → run Gate 3 tests → sign-off.
+12. Task 04: heuristic score → run Gate 4 tests → sign-off.
+13. Task 05: combine priority strategy → review the full knowledge check, run all five gate test files → sign-off.
+14. Task 06: full application demonstration, own tests, README, Git history → final sign-off.
+15. Complete `05_ASSESSMENT/REFLECTION.md`.
 
 **Do not skip ahead or write all five functions at once.** There is a reason each task builds on the previous one.
 

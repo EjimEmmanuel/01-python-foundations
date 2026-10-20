@@ -1,6 +1,6 @@
 # Reading 2 — States, Actions and Legal Choices
 
-**Week 6 · Required reading · Read before project work**
+**Week 6 · Required reading · Read before the tasks that use these ideas; revisit as needed**
 
 ## Learning goals
 Explain what constitutes a state; distinguish possible actions from legal actions; understand why selecting and executing are separate; and describe a game's placement and movement choices using stable data.

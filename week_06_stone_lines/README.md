@@ -4,14 +4,14 @@ A two-player terminal strategy game based on the student's Week 5 Stone Lines ap
 
 **Current status:** Human vs Human works. Random Computer and Rule-Based Computer options are intentionally unfinished until the student completes the upcoming Week 6 assignments.
 
-## 1. Start with the reading guide — do this before coding
+## 1. Start with the reading guide
 
 Week 6 has two guides. Follow them in this order:
 
-1. **Reading guide:** [`week_06_materials/START_HERE.md`](week_06_materials/START_HERE.md). Complete the seven readings, worked examples, and knowledge check. Discuss the check with your teacher and stop until they approve the project stage.
-2. **Project guide:** [`week_06_materials/03_PROJECT/PROJECT_GUIDE.md`](week_06_materials/03_PROJECT/PROJECT_GUIDE.md). Open this only after approval. It explains the project scope and leads through Tasks 00–06 in order.
+1. **Reading guide:** [`week_06_materials/START_HERE.md`](week_06_materials/START_HERE.md). Begin with the reading map and Chapters 1–2 so you understand decisions, game state and legal actions.
+2. **Project guide:** [`week_06_materials/03_PROJECT/PROJECT_GUIDE.md`](week_06_materials/03_PROJECT/PROJECT_GUIDE.md). Use it with Task 00 after that initial reading and teacher kickoff. You do not need to finish all seven chapters first: each task names the reading to do before that stage, and you can return to chapters whenever you need them.
 
-Do not start the project tasks or edit the code before completing the reading stage and receiving approval. The codebase walkthroughs are in `week_06_materials/04_CODEBASE_GUIDES/`; the project guide tells you when to read them. Your earlier Stone Lines notes are in `week_06_materials/prior_notes/` as optional background.
+During Task 00, read `week_06_materials/04_CODEBASE_GUIDES/CODEBASE_CHANGES.md` to see what the teacher changed in preparing this Week 6 project, followed by `ARCHITECTURE_AND_API.md` to understand how its parts fit together. Task 00 also points to the verification guide. Your earlier Stone Lines notes are in `week_06_materials/prior_notes/` as optional background.
 
 ## 2. Requirements
 
@@ -19,9 +19,9 @@ Do not start the project tasks or edit the code before completing the reading st
 - A terminal.
 - `rich` and `pytest`, installed from `requirements.txt`.
 
-## 3. After approval: install, run, and test
+## 3. Task 00: install, run, and test the prepared project
 
-Do these setup and baseline-check steps only after you have completed the readings and knowledge check and your teacher has approved the project stage. The game code is at the root of this Week 6 folder. Open a terminal in `week_06_stone_lines/`:
+After Chapters 1–2 and your teacher's kickoff, follow Task 00 to set up the project and check its baseline. You can continue the other readings alongside the later tasks. The game code is at the root of this Week 6 folder. Open a terminal in `week_06_stone_lines/`:
 
 ```bash
 python3 -m venv .venv
@@ -93,7 +93,7 @@ week_06_stone_lines/
 
 You do **not** need to rewrite the game engine, redesign the terminal UI, move classes to new files, repair JSON file paths, or clean up the old project before starting Week 6. Those preparations have been completed for you. The Week 5 project remains in its own weekly folder; this folder contains the Week 6 starter project.
 
-After completing the readings and getting teacher approval, implement the decision-making strategies described in `week_06_materials/03_PROJECT/`.
+As you progress through the tasks, read the chapters each task assigns and return to earlier material when it helps. Implement the decision-making strategies described in `week_06_materials/03_PROJECT/` only after Task 00's orientation checkpoint.
 
 ## 7. Original work and statistics
 
@@ -103,4 +103,4 @@ To preserve the old records, keep the original ZIP. If you later import records 
 
 ## Week 6 guides and materials
 
-All readings, practice, project tasks, codebase guides, prior notes, and assessment instructions are grouped in [`week_06_materials/`](week_06_materials/). Begin with the [reading start guide](week_06_materials/START_HERE.md); after the reading gate and teacher approval, use the [project guide](week_06_materials/03_PROJECT/PROJECT_GUIDE.md). The project code is at this folder's root. The assigned strategy work is in `stone_lines/computer.py`, with student tests added under `tests/`.
+All readings, practice, project tasks, codebase guides, prior notes, and assessment instructions are grouped in [`week_06_materials/`](week_06_materials/). Begin with the [reading start guide](week_06_materials/START_HERE.md), then use the [project guide](week_06_materials/03_PROJECT/PROJECT_GUIDE.md) and Task 00 after the initial reading and teacher kickoff. Continue the chapter readings as each task calls for them, and revisit them as needed. The project code is at this folder's root. The assigned strategy work is in `stone_lines/computer.py`, with student tests added under `tests/`.

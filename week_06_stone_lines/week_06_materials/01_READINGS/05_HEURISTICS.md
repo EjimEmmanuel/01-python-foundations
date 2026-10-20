@@ -1,6 +1,6 @@
 # Reading 5 — Heuristics and Action Scoring
 
-**Week 6 · Required reading · Read before project work**
+**Week 6 · Required reading · Read before the tasks that use these ideas; revisit as needed**
 
 ## Learning goals
 Explain a heuristic, build simple scoring criteria, distinguish exact wins from estimates, and evaluate competing actions without changing the actual environment.

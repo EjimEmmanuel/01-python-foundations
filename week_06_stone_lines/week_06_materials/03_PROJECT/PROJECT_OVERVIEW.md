@@ -1,6 +1,6 @@
 # Project Brief — Stone Lines Computer Opponent
 
-**Begin only after finishing all seven readings and passing the knowledge check.**
+Begin after reading Chapters 1–2 and receiving the teacher's kickoff for Task 00. You do not need to finish all seven readings before starting: each task assigns the chapters to read before that stage, and you should return to them whenever you need to strengthen your understanding. Review the full knowledge check with your teacher before Tasks 05–06.
 
 ## Outcome
 Extend the **provided** Stone Lines application, not the old Week 5 ZIP. The engine, Rich UI, persistence, menu modes, basic tests and Python package structure are already prepared. Your work is to implement five small decision functions in the existing `stone_lines/computer.py`. The result must support:

@@ -1,6 +1,6 @@
 # Pre-Project Exercises and Worked Examples
 
-These examples are **independent of Stone Lines**. Read them before the knowledge check. Predict answers before reading the explanations.
+These examples are **independent of Stone Lines**. Use them after related chapters, before or during the knowledge check, and whenever you want another example. Predict answers before reading the explanations.
 
 ## Example 1 — A temperature controller
 
