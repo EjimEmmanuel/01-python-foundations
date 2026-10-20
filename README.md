@@ -7,4 +7,4 @@ The command i used to run my create files:
 
 ## Week 6
 
-Continue with [Week 6: Stone Lines decision-making](week_06_stone_lines/README.md). Start at the [Week 6 student guide](week_06_stone_lines/week_06_materials/START_HERE.md).
+For Week 6, begin with the [reading start guide](week_06_stone_lines/week_06_materials/START_HERE.md) and finish the readings, practice, and knowledge check before touching the code. After teacher approval, follow the [Week 6 project guide](week_06_stone_lines/week_06_materials/03_PROJECT/PROJECT_GUIDE.md). The [Week 6 README](week_06_stone_lines/README.md) explains the application and how to run it.

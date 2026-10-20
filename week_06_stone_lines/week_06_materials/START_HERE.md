@@ -17,6 +17,7 @@ This folder contains the complete Week 6 reading path, exercises, fixed project 
 | `02_PRACTICE/PREPROJECT_WORKED_EXAMPLES.md` | Non-game examples and independent exercises | After readings 1–7; before knowledge check |
 | `02_PRACTICE/KNOWLEDGE_CHECK.md` | Assessment of concepts before programming | After all readings and examples |
 | `03_PROJECT/PROJECT_OVERVIEW.md` | What the Stone Lines update must deliver | **Only after teacher approves knowledge check** |
+| `03_PROJECT/PROJECT_GUIDE.md` | The project entry point, task order, checkpoints and code boundaries | **Only after teacher approval** |
 | `03_PROJECT/IMPLEMENTATION_RULES.md` | Mandatory architecture, action representation, scoring, tie-breaks and restrictions | Read before Task 00 and keep open during coding |
 | `03_PROJECT/TASK_00...TASK_06` | Seven ordered tasks with exact file/function requirements | Complete **one at a time** |
 | `03_PROJECT/FINAL_ACCEPTANCE_CHECKLIST.md` | Final functionality and structure checks | After Task 06; preview before project work |
@@ -36,7 +37,7 @@ This folder contains the complete Week 6 reading path, exercises, fixed project 
 
 ## Stage B — Prepare the existing project (not a rebuild)
 
-7. Open `03_PROJECT/PROJECT_OVERVIEW.md` and `03_PROJECT/IMPLEMENTATION_RULES.md`.
+7. Open `03_PROJECT/PROJECT_GUIDE.md`, then read `03_PROJECT/PROJECT_OVERVIEW.md` and `03_PROJECT/IMPLEMENTATION_RULES.md`.
 8. Open `03_PROJECT/TASK_00_ORIENTATION.md`. It guides you through the codebase at the root of `week_06_stone_lines/`, its technical documents, dependency setup and baseline checks.
 9. Keep all Week 6 code in this repository. Do not change the game engine, UI, storage, constants or supplied tests.
 

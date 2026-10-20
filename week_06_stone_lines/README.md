@@ -4,25 +4,24 @@ A two-player terminal strategy game based on the student's Week 5 Stone Lines ap
 
 **Current status:** Human vs Human works. Random Computer and Rule-Based Computer options are intentionally unfinished until the student completes the upcoming Week 6 assignments.
 
-## 1. Before you start
+## 1. Start with the reading guide — do this before coding
 
-Read these documents in order:
+Week 6 has two guides. Follow them in this order:
 
-1. [`week_06_materials/04_CODEBASE_GUIDES/CODEBASE_CHANGES.md`](week_06_materials/04_CODEBASE_GUIDES/CODEBASE_CHANGES.md) — what was changed from your original Week 5 version and why.
-2. [`week_06_materials/04_CODEBASE_GUIDES/ARCHITECTURE_AND_API.md`](week_06_materials/04_CODEBASE_GUIDES/ARCHITECTURE_AND_API.md) — what each file does, how actions work, and where Week 6 strategies belong.
-3. [`week_06_materials/04_CODEBASE_GUIDES/VERIFICATION.md`](week_06_materials/04_CODEBASE_GUIDES/VERIFICATION.md) — what has been tested and what is intentionally unfinished.
+1. **Reading guide:** [`week_06_materials/START_HERE.md`](week_06_materials/START_HERE.md). Complete the seven readings, worked examples, and knowledge check. Discuss the check with your teacher and stop until they approve the project stage.
+2. **Project guide:** [`week_06_materials/03_PROJECT/PROJECT_GUIDE.md`](week_06_materials/03_PROJECT/PROJECT_GUIDE.md). Open this only after approval. It explains the project scope and leads through Tasks 00–06 in order.
 
-Your original learning notes are saved under `week_06_materials/prior_notes/`. They are optional background, not new assignments.
+Do not start the project tasks or edit the code before completing the reading stage and receiving approval. The codebase walkthroughs are in `week_06_materials/04_CODEBASE_GUIDES/`; the project guide tells you when to read them. Your earlier Stone Lines notes are in `week_06_materials/prior_notes/` as optional background.
 
 ## 2. Requirements
 
 - Python **3.11 or newer**.
-- A terminal (Fedora terminal is suitable).
+- A terminal.
 - `rich` and `pytest`, installed from `requirements.txt`.
 
-## 3. Install and run on Fedora/Linux
+## 3. After approval: install, run, and test
 
-The game code is at the root of this Week 6 folder. Open a terminal in `week_06_stone_lines/`:
+Do these setup and baseline-check steps only after you have completed the readings and knowledge check and your teacher has approved the project stage. The game code is at the root of this Week 6 folder. Open a terminal in `week_06_stone_lines/`:
 
 ```bash
 python3 -m venv .venv
@@ -102,6 +101,6 @@ This codebase is derived from the submitted `01-python-foundations-master.zip`. 
 
 To preserve the old records, keep the original ZIP. If you later import records into the new schema, make a backup first; old records may not have the new `draws` field, which is supported automatically when players are updated.
 
-## Week 6 learning materials
+## Week 6 guides and materials
 
-All Week 6 readings, codebase guides, practice, project tasks, prior learning notes and assessment guidance are together in [`week_06_materials/`](week_06_materials/). Begin at [`week_06_materials/START_HERE.md`](week_06_materials/START_HERE.md). The game code is at the root of this Week 6 folder; after the reading gate, work in `stone_lines/computer.py` and add your tests under `tests/`.
+All readings, practice, project tasks, codebase guides, prior notes, and assessment instructions are grouped in [`week_06_materials/`](week_06_materials/). Begin with the [reading start guide](week_06_materials/START_HERE.md); after the reading gate and teacher approval, use the [project guide](week_06_materials/03_PROJECT/PROJECT_GUIDE.md). The project code is at this folder's root. The assigned strategy work is in `stone_lines/computer.py`, with student tests added under `tests/`.
